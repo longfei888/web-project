@@ -1,0 +1,40 @@
+//一物理像素高度
+//@color 边线颜色
+.onePx(top,@color:black){
+ position: relative;
+ &::before{
+     position: absolute;
+     content: "";
+     display: block;
+     top:0;
+     height:1px;
+     width:100%;
+     background:@color;
+     @media (-webkit-device-pixel-ratio:2){
+         transform: scale(.5);
+     };
+     @media (-webkit-device-pixel-ratio:3){
+         transform: scaleY(.333333); 
+     };
+ }
+}
+
+
+.onePx(bottom,@color:black){
+   position: relative;
+   &::before{
+       position: absolute;
+       content:"";
+       display: block;
+       bottom:0;
+       height:1px;
+       width:100%;
+       background: @color;
+       @media (-webkit-device-pixel-ratio:2){
+           transform: scale(.5);
+       };
+       @media (-webkit-device-pixel-ratio:3){
+           transform: scaleY(.333333); 
+       };        
+   }
+}

@@ -1,0 +1,372 @@
+html,
+body,
+ul,
+li,
+h1,
+h2,
+span,
+div,
+p,
+a,
+form,
+input {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+a,
+input,
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+img {
+  display: block;
+}
+.carousel-wrap {
+  position: relative;
+}
+.carousel-wrap > .list {
+  list-style-type: none;
+  position: absolute;
+  overflow: hidden;
+}
+.carousel-wrap > .list > li {
+  float: left;
+}
+.carousel-wrap > .list > li > a {
+  display: block;
+}
+.carousel-wrap > .list > li > a > img {
+  width: 100%;
+  display: block;
+}
+.carousel-wrap > .points-wrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.carousel-wrap > .points-wrap > span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  margin-left: 5px;
+}
+.carousel-wrap > .points-wrap > span.active {
+  background-color: #f00;
+}
+.clearfix,
+#wrap .content .tap-wrap .tap-content ul {
+  *zoom: 1;
+}
+.clearfix:after,
+#wrap .content .tap-wrap .tap-content ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrap {
+  height: 100%;
+  font-size: 16px;
+  overflow: auto;
+  background: #eeeeee;
+  position: relative;
+}
+#wrap .head {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: #333;
+  height: 4rem;
+}
+#wrap .head .head-top {
+  height: 2rem;
+}
+#wrap .head .head-top .logo {
+  float: left;
+  padding: 0.38518519rem 0.25185185rem 0.31111111rem 0.25185185rem;
+}
+#wrap .head .head-top .logo img {
+  width: 3.55555556rem;
+}
+#wrap .head .head-top .menuBtn {
+  float: left;
+  width: 1.91111111rem;
+  height: 2rem;
+  background: url(../img/menuBtn.png) no-repeat;
+  background-size: 1.21481481rem 3.45185185rem;
+  background-position: center 0.23703704rem;
+}
+#wrap .head .head-top .menuBtn.active {
+  background-position: center -1.77777778rem;
+}
+#wrap .head .head-top .btns {
+  padding-top: 0.31111111rem;
+  float: right;
+}
+#wrap .head .head-top .btns a {
+  float: left;
+  width: 1.64444444rem;
+  height: 1.15555556rem;
+  line-height: 1.15555556rem;
+  background: #eb101b;
+  color: #ddd;
+  margin-right: 0.22222222rem;
+  font-size: 0.62222222rem;
+  text-align: center;
+  border-radius: 0.11851852rem;
+}
+#wrap .head .head-top .btns a.search {
+  width: 130 67.5rem;
+  height: 88 67.5rem;
+  line-height: 88 67.5rem;
+  color: #fff;
+  margin-right: 0.44444444rem;
+  margin-top: 0.04444444rem;
+  font-weight: bold;
+  border-radius: 10 67.5rem;
+}
+#wrap .head .head-bottom {
+  height: 1.52592593rem;
+  padding: 0.23703704rem;
+}
+#wrap .head .head-bottom form {
+  height: 100%;
+}
+#wrap .head .head-bottom form input[type="text"] {
+  float: left;
+  box-sizing: border-box;
+  height: 1.52592593rem;
+  width: 12.28148148rem;
+  background: #ddd;
+  padding: 0.07407407rem 0.14814815rem;
+  border: 1px solid #5a5a5a;
+  font-size: 0.60740741rem;
+  color: #ccc;
+  border-radius: 0.22222222rem 0 0 0.22222222rem;
+}
+#wrap .head .head-bottom form input[type="text"]::-webkit-input-placeholder {
+  color: #ccc;
+}
+#wrap .head .head-bottom form input[type="text"]:focus {
+  background: #fff;
+}
+#wrap .head .head-bottom form input[type="submit"] {
+  float: left;
+  width: 3.00740741rem;
+  height: 1.52592593rem;
+  background: #db1919;
+  color: #ffffff;
+  font-size: 0.62222222rem;
+  border-radius: 0.22222222rem 15 67.5rem 0;
+}
+#wrap .head .mask {
+  position: relative;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  top: 2rem;
+  width: 100%;
+  padding: 10 67.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+#wrap .head .mask::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  height: 1px;
+  width: 100%;
+  background: black;
+}
+@media (-webkit-device-pixel-ratio: 2) {
+  #wrap .head .mask::before {
+    transform: scale(0.5);
+  }
+}
+@media (-webkit-device-pixel-ratio: 3) {
+  #wrap .head .mask::before {
+    transform: scaleY(0.333333);
+  }
+}
+#wrap .head .mask > li {
+  width: 22.5%;
+  height: 2rem;
+  font-size: 0.74074074rem;
+  line-height: 2rem;
+  text-align: center;
+  float: left;
+}
+#wrap .head .mask > li a {
+  color: #ffffff;
+}
+#wrap .content {
+  position: absolute;
+  top: 4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#wrap .content .nav {
+  position: relative;
+  width: 100%;
+  height: 2.62222222rem;
+  box-sizing: border-box;
+  padding: 0.45925926rem 0 0.20740741rem 0;
+  background: #e91c1c;
+}
+#wrap .content .nav::before {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: red;
+}
+@media (-webkit-device-pixel-ratio: 2) {
+  #wrap .content .nav::before {
+    transform: scale(0.5);
+  }
+}
+@media (-webkit-device-pixel-ratio: 3) {
+  #wrap .content .nav::before {
+    transform: scaleY(0.333333);
+  }
+}
+#wrap .content .nav .list {
+  font-size: 0;
+  white-space: nowrap;
+  float: left;
+}
+#wrap .content .nav .list > li {
+  height: 1.91111111rem;
+  line-height: 1.91111111rem;
+  padding: 0 0.56296296rem;
+  font-size: 1rem;
+  display: inline-block;
+}
+#wrap .content .nav .list > li a {
+  display: block;
+  color: #ccc;
+  height: 100%;
+  padding: 0 0.56296296rem;
+}
+#wrap .content .nav .list > li a.active {
+  background: #b41717;
+  color: #fff;
+}
+#wrap .content .tap-wrap {
+  overflow: auto;
+  width: 15.4962963rem;
+  background: #fff;
+  margin: 0 auto;
+}
+#wrap .content .tap-wrap .tap-head {
+  height: 2rem;
+  line-height: 2rem;
+}
+#wrap .content .tap-wrap .tap-head h2 {
+  float: left;
+  font-size: 1rem;
+}
+#wrap .content .tap-wrap .tap-head span {
+  float: right;
+  font-size: 0.8rem;
+}
+#wrap .content .tap-wrap .tap-nav {
+  position: relative;
+  height: 1.55555556rem;
+  line-height: 1.55555556rem;
+}
+#wrap .content .tap-wrap .tap-nav a {
+  float: left;
+  height: 1.55555556rem;
+  margin-right: 0.2962963rem;
+  font-size: 0.65185185rem;
+  text-align: center;
+  color: #6b6b6b;
+}
+#wrap .content .tap-wrap .tap-nav .smallG {
+  position: absolute;
+  left: 0;
+  bottom: 0.14814815rem;
+  height: 0.13333333rem;
+  background: #ec2121;
+  transition: 1s transform,1s width;
+}
+#wrap .content .tap-wrap .tap-content {
+  width: 300%;
+}
+#wrap .content .tap-wrap .tap-content ul {
+  float: left;
+  width: 33.33333%;
+}
+#wrap .content .tap-wrap .tap-content ul li {
+  box-sizing: border-box;
+  width: 7.4962963rem;
+  margin: 0.11851852rem;
+  padding: 0.07407407rem;
+  background: #e2d8d8;
+  color: #000;
+  overflow: hidden;
+  float: left;
+}
+#wrap .content .tap-wrap .tap-content ul li a img {
+  width: 100%;
+}
+#wrap .content .tap-wrap .tap-content ul li a span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #605e5e;
+}
+#wrap .content .tap-wrap .tap-content ul li .tap-discuss .right {
+  float: right;
+  margin-right: 0.44444444rem;
+  vertical-align: middle;
+}
+#wrap .content .tap-wrap .tap-content ul li .tap-discuss .right span:nth-child(1) {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(../img/ice.png) no-repeat;
+}
+#wrap .content .tap-wrap .tap-content ul li .tap-discuss .left {
+  float: left;
+  vertical-align: middle;
+}
+#wrap .content .tap-wrap .tap-content ul li .tap-discuss .left span:nth-child(1) {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(../img/ice.png) no-repeat;
+  background-position: 0 -0.8rem;
+}
+#wrap .content .tap-wrap .tap-content .tap-loading {
+  background: url(../img/loading.gif) no-repeat;
+  background-position: center;
+  opacity: 0;
+  /*默认隐藏*/
+  height: 100px;
+}
